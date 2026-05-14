@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew's Enterprises | Asphalt & Paving | Claremont, NH</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+    .site { max-width: 900px; margin: 0 auto; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: #1a1a1a; border-bottom: 3px solid #d4a017; flex-wrap: wrap; gap: 0.75rem; }
+    .nav-logo span:first-child { font-size: 18px; font-weight: 500; color: #d4a017; letter-spacing: 0.05em; display: block; }
+    .nav-logo span:last-child { font-size: 11px; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: #ccc; font-size: 13px; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links a:hover { color: #d4a017; }
+    .nav-cta { background: #d4a017; color: #1a1a1a; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 4px; text-decoration: none; letter-spacing: 0.04em; }
+    .nav-cta:hover { background: #e6b520; }
+    .hero { background: #1a1a1a; padding: 4rem 2rem 3rem; border-bottom: 3px solid #d4a017; text-align: center; }
+    .hero-badge { display: inline-block; background: #d4a017; color: #1a1a1a; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 1.25rem; }
+    .hero h1 { font-size: 36px; font-weight: 500; color: #fff; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 span { color: #d4a017; }
+    .hero p { font-size: 16px; color: #aaa; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #d4a017; color: #1a1a1a; font-weight: 500; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+    .btn-secondary { border: 1.5px solid #d4a017; color: #d4a017; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+    .hero-stats { display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 28px; font-weight: 500; color: #d4a017; }
+    .hero-stat .label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+    .divider { width: 1px; background: #333; }
+    .why { background: #f8f6f0; padding: 2rem 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .why-item { display: flex; align-items: center; gap: 10px; }
+    .why-icon { width: 36px; height: 36px; background: #d4a017; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+    .why-text { font-size: 14px; font-weight: 500; color: #1a1a1a; }
+    .services { padding: 3rem 2rem; background: #fff; }
+    .section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4a017; margin-bottom: 0.5rem; font-weight: 500; }
+    .section-title { font-size: 26px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+    .section-sub { font-size: 15px; color: #666; margin-bottom: 2rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; }
+    .service-card { border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1.5rem 1.25rem; background: #fafaf8; transition: border-color 0.2s; }
+    .service-card:hover { border-color: #d4a017; background: #fff; }
+    .service-icon { font-size: 28px; margin-bottom: 0.75rem; }
+    .service-card h3 { font-size: 15px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+    .service-card p { font-size: 13px; color: #666; line-height: 1.6; }
+    .vet-banner { background: #1a1a1a; padding: 2.5rem 2rem; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .vet-text h2 { font-size: 20px; font-weight: 500; color: #d4a017; margin-bottom: 0.5rem; }
+    .vet-text p { font-size: 14px; color: #aaa; max-width: 480px; line-height: 1.7; }
+    .reviews { padding: 3rem 2rem; background: #f8f6f0; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .review-card { background: #fff; border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1.25rem; }
+    .stars { color: #d4a017; font-size: 14px; margin-bottom: 0.5rem; }
+    .review-card p { font-size: 13px; color: #444; line-height: 1.6; margin-bottom: 0.75rem; font-style: italic; }
+    .reviewer { font-size: 12px; font-weight: 500; color: #1a1a1a; }
+    .reviewer span { color: #888; font-weight: 400; }
+    .process { padding: 3rem 2rem; background: #fff; }
+    .steps { display: flex; gap: 0; margin-top: 2rem; flex-wrap: wrap; }
+    .step { flex: 1; min-width: 140px; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1rem; position: relative; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: #d4a017; color: #1a1a1a; font-size: 18px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; flex-shrink: 0; }
+    .step h4 { font-size: 14px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.25rem; }
+    .step p { font-size: 12px; color: #666; line-height: 1.5; }
+    .step-arrow { position: absolute; right: -8px; top: 22px; color: #d4a017; font-size: 18px; }
+    .areas { background: #1a1a1a; padding: 2.5rem 2rem; text-align: center; }
+    .areas-label { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.5rem; }
+    .areas-title { font-size: 22px; font-weight: 500; color: #d4a017; margin-bottom: 0.75rem; }
+    .areas-desc { font-size: 15px; color: #aaa; max-width: 520px; margin: 0 auto 1.5rem; line-height: 1.7; }
+    .areas-radius { display: inline-block; border: 1.5px solid #d4a017; color: #d4a017; font-size: 14px; font-weight: 500; padding: 10px 28px; border-radius: 4px; letter-spacing: 0.05em; }
+    .contact { padding: 3rem 2rem; background: #fff; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-row { display: flex; align-items: flex-start; gap: 12px; }
+    .contact-dot { width: 10px; height: 10px; border-radius: 50%; background: #d4a017; margin-top: 5px; flex-shrink: 0; }
+    .contact-row strong { font-size: 13px; font-weight: 500; color: #1a1a1a; display: block; }
+    .contact-row span { font-size: 13px; color: #666; }
+    .contact-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 10px 12px; border: 0.5px solid #d0cdc6; border-radius: 6px; font-size: 14px; font-family: inherit; color: #1a1a1a; background: #fafaf8; }
+    .contact-form textarea { height: 90px; resize: vertical; }
+    .contact-form button { background: #d4a017; color: #1a1a1a; border: none; padding: 12px; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; }
+    .contact-form button:hover { background: #e6b520; }
+    footer { background: #111; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer span { font-size: 12px; color: #555; }
+    .footer-logo { font-size: 14px; font-weight: 500; color: #d4a017; }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 26px; }
+      .step-arrow { display: none; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="site">
+  <nav>
+    <div class="nav-logo">
+      <span>Matthew's Enterprises</span>
+      <span>Veteran-Owned &bull; Claremont, NH</span>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get a Quote</a>
+  </nav>
+  <div class="hero">
+    <div class="hero-badge">Veteran-Owned &amp; Operated</div>
+    <h1>Professional <span>Pavement Services</span><br>Done Right, Every Time</h1>
+    <p>Serving Claremont and surrounding NH communities with expert sealcoating, paving, crack sealing, line striping, snow plowing, and more.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#contact">Get a Free Quote</a>
+      <a class="btn-secondary" href="tel:6035588380">Call (603) 558-8380</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">18+</div><div class="label">Years Experience</div></div>
+      <div class="divider"></div>
+      <div class="hero-stat"><div class="num">500+</div><div class="label">Jobs Completed</div></div>
+      <div class="divider"></div>
+      <div class="hero-stat"><div class="num">5&#9733;</div><div class="label">Google Rated</div></div>
+    </div>
+  </div>
+  <div class="why">
+    <div class="why-item"><div class="why-icon">&#10003;</div><div class="why-text">Licensed &amp; Insured</div></div>
+    <div class="why-item"><div class="why-icon">&#9733;</div><div class="why-text">Veteran-Owned</div></div>
+    <div class="why-item"><div class="why-icon">$</div><div class="why-text">Free Estimates</div></div>
+    <div class="why-item"><div class="why-icon">&#9201;</div><div class="why-text">Fast Turnaround</div></div>
+    <div class="why-item"><div class="why-icon">&#9670;</div><div class="why-text">Quality Materials</div></div>
+  </div>
+  <div class="services" id="services">
+    <div class="section-label">What we do</div>
+    <div class="section-title">Our services</div>
+    <div class="section-sub">Protecting your pavement and property year-round</div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🛣️</div><h3>Sealcoating</h3><p>Protect your asphalt from UV rays, water, and fuel damage with a professional sealcoat application.</p></div>
+      <div class="service-card"><div class="service-icon">🔧</div><h3>Crack sealing</h3><p>Stop water infiltration before it becomes costly. We fill and seal cracks with hot-pour material.</p></div>
+      <div class="service-card"><div class="service-icon">🏗️</div><h3>Paving</h3><p>New driveways, parking lots, and patches laid smooth and built to last for years of heavy use.</p></div>
+      <div class="service-card"><div class="service-icon">📏</div><h3>Line striping</h3><p>Sharp, precise parking lot markings and traffic lines for safety and a clean professional look.</p></div>
+      <div class="service-card"><div class="service-icon">❄️</div><h3>Snow plowing</h3><p>Reliable snow removal to keep your driveway and lot clear and safe all winter long.</p></div>
+      <div class="service-card"><div class="service-icon">🧂</div><h3>Salt &amp; sanding</h3><p>Ice prevention and traction treatment to keep your property safe during NH winters.</p></div>
+    </div>
+  </div>
+  <div class="vet-banner">
+    <div class="vet-text">
+      <h2>Proud veteran-owned business</h2>
+      <p>Owner Matt brings over 18 years of experience in the asphalt and paving industry and 8 years of Army service. He carries the same values of discipline, teamwork, and integrity into every project. When you hire Matthew's Enterprises, you're partnering with a team that treats your property like their own.</p>
+    </div>
+  </div>
+  <div class="reviews" id="reviews">
+    <div class="section-label">What customers say</div>
+    <div class="section-title">Real reviews</div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Matt came out and took care of my driveway. After filling the cracks and sealcoating it looked almost brand new again. Excellent service for a great price."</p><div class="reviewer">Patrick Farrell <span>— Google</span></div></div>
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Matthew and his team do amazing work! Crack seal, seal coat, and line striping! So kind, so efficient, and the best prices!"</p><div class="reviewer">Gina Morrissette <span>— Google</span></div></div>
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"A++ amazing work and super quick. I contacted them and they were on the job site within 48 hours! Would highly recommend!"</p><div class="reviewer">Justin Martin <span>— Google</span></div></div>
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Best seal coating in New Hampshire!!"</p><div class="reviewer">Phil Vachon <span>— Google</span></div></div>
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"This is the best sealcoat company in Claremont NH! I would highly recommend. 10/10"</p><div class="reviewer">Marie Madison <span>— Google</span></div></div>
+      <div class="review-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"I redid my driveway with them and it turned out amazing."</p><div class="reviewer">Give It A Go <span>— Google</span></div></div>
+    </div>
+  </div>
+  <div class="process">
+    <div class="section-label">How it works</div>
+    <div class="section-title">Simple process</div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Request a quote</h4><p>Call, text, or fill out the form below.</p><div class="step-arrow">›</div></div>
+      <div class="step"><div class="step-num">2</div><h4>Free estimate</h4><p>We come out and give you a clear no-pressure quote.</p><div class="step-arrow">›</div></div>
+      <div class="step"><div class="step-num">3</div><h4>We get to work</h4><p>On time, professional, done right the first time.</p><div class="step-arrow">›</div></div>
+      <div class="step"><div class="step-num">4</div><h4>You're satisfied</h4><p>We don't leave until you're happy.</p></div>
+    </div>
+  </div>
+  <div class="areas">
+    <div class="areas-label">Where we work</div>
+    <div class="areas-title">Serving all of central &amp; southern NH</div>
+    <div class="areas-desc">Based in Claremont, NH we travel up to an hour to serve residential and commercial customers throughout the region. Not sure if we cover your area? Just give us a call.</div>
+    <div class="areas-radius">Within ~1 hour of Claremont, NH</div>
+  </div>
+  <div class="contact" id="contact">
+    <div class="section-label">Reach out</div>
+    <div class="section-title">Get a free quote</div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-row"><div class="contact-dot"></div><div><strong>Phone</strong><span>(603) 558-8380</span></div></div>
+        <div class="contact-row"><div class="contact-dot"></div><div><strong>Email</strong><span>matthewent20@yahoo.com</span></div></div>
+        <div class="contact-row"><div class="contact-dot"></div><div><strong>Location</strong><span>Claremont, NH &amp; surrounding areas</span></div></div>
+        <div class="contact-row"><div class="contact-dot"></div><div><strong>Hours</strong><span>Mon-Sun: 7am-7pm</span></div></div>
+      </div>
+      <div class="contact-form">
+        <input type="text" name="name" placeholder="Your name" />
+        <input type="tel" name="phone" placeholder="Phone number" />
+        <input type="email" name="email" placeholder="Email address" />
+        <select name="service">
+          <option value="">Service needed...</option>
+          <option>Sealcoating</option>
+          <option>Crack sealing</option>
+          <option>Paving</option>
+          <option>Line striping</option>
+          <option>Snow plowing</option>
+          <option>Salt &amp; sanding</option>
+          <option>Multiple services</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your project..."></textarea>
+        <button type="button">Request a free quote</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">Matthew's Enterprises</div>
+    <span>Veteran-Owned &bull; Claremont, NH</span>
+    <span>&copy; 2025 Matthew's Enterprises. All rights reserved.</span>
+  </footer>
+</div>
+</body>
+</html>
