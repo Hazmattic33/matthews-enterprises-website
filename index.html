@@ -89,6 +89,13 @@ footer span { font-size: 12px; color: #555; }
   .step-arrow { display: none; }
   footer { flex-direction: column; text-align: center; }
 }
+
+.services-teaser { padding: 3rem 2rem; background: #fff; }
+.services-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.preview-item { display: flex; align-items: center; gap: 10px; background: #fafaf8; border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1rem; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+.preview-icon { font-size: 22px; }
+.btn-view-services { display: inline-block; background: #d4a017; color: #1a1a1a; font-weight: 500; padding: 12px 32px; border-radius: 4px; text-decoration: none; font-size: 14px; letter-spacing: 0.04em; }
+.btn-view-services:hover { background: #e6b520; }
 </style>
 </head>
 <body>
@@ -99,7 +106,7 @@ footer span { font-size: 12px; color: #555; }
       <span>Veteran-Owned &bull; Claremont, NH</span>
     </div>
     <div class="nav-links">
-      <a href="#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </div>
@@ -127,67 +134,21 @@ footer span { font-size: 12px; color: #555; }
     <div class="why-item"><div class="why-icon">&#128081;</div><div class="why-text">Veteran-Owned</div></div>
     <div class="why-item"><div class="why-icon">&#128205;</div><div class="why-text">Local &amp; Trusted</div></div>
   </div>
-  <section class="services" id="services">
+  <section class="services-teaser" id="services">
     <div class="section-label">What We Do</div>
     <div class="section-title">Our Services</div>
-    <div class="section-sub">Professional asphalt &amp; property services for residential and commercial clients.</div>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="images/paving1.jpg" alt="Paving and Driveway Installation" />
-        <div class="service-card-body">
-          <div class="service-icon">&#127945;</div>
-          <h3>Paving &amp; Driveways</h3>
-          <p>New driveway installation and full-depth paving for residential and commercial properties.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/driveway1.jpg" alt="Sealcoating" />
-        <div class="service-card-body">
-          <div class="service-icon">&#127863;</div>
-          <h3>Sealcoating</h3>
-          <p>Protect and extend the life of your pavement with professional asphalt sealcoating.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/cracksealing1.jpg" alt="Crack Sealing" />
-        <div class="service-card-body">
-          <div class="service-icon">&#128295;</div>
-          <h3>Crack Sealing</h3>
-          <p>Prevent water damage and extend pavement life with professional hot-pour crack sealing.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/line-striping1.jpg" alt="Line Striping" />
-        <div class="service-card-body">
-          <div class="service-icon">&#128663;</div>
-          <h3>Line Striping</h3>
-          <p>Crisp, clean parking lot and road markings for commercial and municipal properties.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/plowing1.jpg" alt="Snow Plowing" />
-        <div class="service-card-body">
-          <div class="service-icon">&#10052;</div>
-          <h3>Snow Plowing</h3>
-          <p>Reliable seasonal snow removal to keep your driveways and lots safe all winter long.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/plowing2.jpg" alt="Loader Services" />
-        <div class="service-card-body">
-          <div class="service-icon">&#9881;</div>
-          <h3>Loader Services</h3>
-          <p>Heavy equipment loader services for snow removal, grading, and site work.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img src="images/business-card.jpg" alt="Property Maintenance" />
-        <div class="service-card-body">
-          <div class="service-icon">&#127968;</div>
-          <h3>Property Maintenance</h3>
-          <p>Full-service property upkeep including sealcoating, repairs, and seasonal maintenance.</p>
-        </div>
-      </div>
+    <div class="section-sub">We offer a full range of asphalt and property services for residential and commercial clients throughout the Claremont, NH area.</div>
+    <div class="services-preview">
+      <div class="preview-item"><span class="preview-icon">&#127945;</span><span>Paving &amp; Driveways</span></div>
+      <div class="preview-item"><span class="preview-icon">&#127863;</span><span>Sealcoating</span></div>
+      <div class="preview-item"><span class="preview-icon">&#128295;</span><span>Crack Sealing</span></div>
+      <div class="preview-item"><span class="preview-icon">&#128663;</span><span>Line Striping</span></div>
+      <div class="preview-item"><span class="preview-icon">&#10052;</span><span>Snow Plowing</span></div>
+      <div class="preview-item"><span class="preview-icon">&#9881;</span><span>Loader Services</span></div>
+      <div class="preview-item"><span class="preview-icon">&#127968;</span><span>Property Maintenance</span></div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a class="btn-view-services" href="services.html">View All Services &rarr;</a>
     </div>
   </section>
   <div class="vet-banner">
