@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Services | Matthew's Enterprises | Claremont, NH</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+.site { max-width: 900px; margin: 0 auto; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: #1a1a1a; border-bottom: 3px solid #d4a017; flex-wrap: wrap; gap: 0.75rem; }
+.nav-logo span:first-child { font-size: 18px; font-weight: 500; color: #d4a017; letter-spacing: 0.05em; display: block; }
+.nav-logo span:last-child { font-size: 11px; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { color: #ccc; font-size: 13px; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+.nav-links a:hover, .nav-links a.active { color: #d4a017; }
+.nav-cta { background: #d4a017; color: #1a1a1a; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 4px; text-decoration: none; letter-spacing: 0.04em; }
+.nav-cta:hover { background: #e6b520; }
+.page-hero { background: #1a1a1a; padding: 3rem 2rem 2.5rem; border-bottom: 3px solid #d4a017; text-align: center; }
+.page-hero-badge { display: inline-block; background: #d4a017; color: #1a1a1a; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 1rem; }
+.page-hero h1 { font-size: 32px; font-weight: 500; color: #fff; margin-bottom: 0.75rem; }
+.page-hero h1 span { color: #d4a017; }
+.page-hero p { font-size: 15px; color: #aaa; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+.services { padding: 3rem 2rem; background: #fff; }
+.section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4a017; margin-bottom: 0.5rem; font-weight: 500; }
+.section-title { font-size: 26px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+.section-sub { font-size: 15px; color: #666; margin-bottom: 2rem; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.service-card { border: 0.5px solid #e0ddd6; border-radius: 8px; overflow: hidden; background: #fafaf8; transition: border-color 0.2s, box-shadow 0.2s; }
+.service-card:hover { border-color: #d4a017; box-shadow: 0 4px 16px rgba(212,160,23,0.1); }
+.service-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.service-card-body { padding: 1.5rem; }
+.service-icon { font-size: 28px; margin-bottom: 0.75rem; }
+.service-card h3 { font-size: 17px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+.service-card p { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 1rem; }
+.service-card a { display: inline-block; background: #d4a017; color: #1a1a1a; font-size: 12px; font-weight: 500; padding: 7px 16px; border-radius: 4px; text-decoration: none; letter-spacing: 0.04em; }
+.service-card a:hover { background: #e6b520; }
+.cta-banner { background: #1a1a1a; padding: 3rem 2rem; text-align: center; border-top: 3px solid #d4a017; }
+.cta-banner h2 { font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 0.75rem; }
+.cta-banner p { font-size: 15px; color: #aaa; max-width: 480px; margin: 0 auto 1.75rem; line-height: 1.7; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: #d4a017; color: #1a1a1a; font-weight: 500; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+.btn-secondary { border: 1.5px solid #d4a017; color: #d4a017; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+footer { background: #111; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+footer span { font-size: 12px; color: #555; }
+.footer-logo { font-size: 14px; font-weight: 500; color: #d4a017; }
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .page-hero h1 { font-size: 24px; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="site">
+  <nav>
+    <a class="nav-logo" href="index.html" style="text-decoration:none;">
+      <span>Matthew's Enterprises</span>
+      <span>Veteran-Owned &bull; Claremont, NH</span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html" class="active">Services</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="index.html#contact">Get a Quote</a>
+  </nav>
+  <div class="page-hero">
+    <div class="page-hero-badge">What We Offer</div>
+    <h1>Our <span>Services</span></h1>
+    <p>From fresh paving to winter snow removal, Matthew's Enterprises handles it all with professionalism and quality craftsmanship.</p>
+  </div>
+  <section class="services">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">All Services</div>
+    <div class="section-sub">Professional asphalt &amp; property services for residential and commercial clients throughout the Claremont, NH area.</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/paving1.jpg" alt="Paving and Driveway Installation" />
+        <div class="service-card-body">
+          <div class="service-icon">&#127945;</div>
+          <h3>Paving &amp; Driveways</h3>
+          <p>New driveway installation and full-depth asphalt paving for residential and commercial properties. We deliver smooth, durable results built to last.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/driveway1.jpg" alt="Sealcoating" />
+        <div class="service-card-body">
+          <div class="service-icon">&#127863;</div>
+          <h3>Sealcoating</h3>
+          <p>Protect and extend the life of your pavement with professional asphalt sealcoating. Shields against UV rays, water, and everyday wear.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/cracksealing1.jpg" alt="Crack Sealing" />
+        <div class="service-card-body">
+          <div class="service-icon">&#128295;</div>
+          <h3>Crack Sealing</h3>
+          <p>Prevent water infiltration and pavement deterioration with our professional hot-pour crack sealing service. Stop small cracks before they become big problems.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/line-striping1.jpg" alt="Line Striping" />
+        <div class="service-card-body">
+          <div class="service-icon">&#128663;</div>
+          <h3>Line Striping</h3>
+          <p>Crisp, clean parking lot and road markings for commercial and municipal properties. We ensure compliance and safety with precise line striping.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/plowing1.jpg" alt="Snow Plowing" />
+        <div class="service-card-body">
+          <div class="service-icon">&#10052;</div>
+          <h3>Snow Plowing</h3>
+          <p>Reliable seasonal snow removal to keep your driveways and lots safe all winter long. Available for residential and commercial properties.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/plowing2.jpg" alt="Loader Services" />
+        <div class="service-card-body">
+          <div class="service-icon">&#9881;</div>
+          <h3>Loader Services</h3>
+          <p>Heavy equipment loader services for snow removal, grading, and site work. Our equipment handles the toughest jobs efficiently.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/business-card.jpg" alt="Property Maintenance" />
+        <div class="service-card-body">
+          <div class="service-icon">&#127968;</div>
+          <h3>Property Maintenance</h3>
+          <p>Full-service property upkeep including sealcoating, repairs, and seasonal maintenance. Keep your property looking its best year-round.</p>
+          <a href="index.html#contact">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-banner">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us today for a free, no-obligation estimate on any of our services.</p>
+    <div class="cta-btns">
+      <a class="btn-primary" href="index.html#contact">Get a Free Quote</a>
+      <a class="btn-secondary" href="tel:6035588380">Call (603) 558-8380</a>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">Matthew's Enterprises LLC</div>
+    <span>24 Bible Hill Rd &bull; Claremont, NH &bull; (603) 558-8380</span>
+    <span>&copy; 2025 Matthew's Enterprises LLC</span>
+  </footer>
+</div>
+</body>
+</html>
