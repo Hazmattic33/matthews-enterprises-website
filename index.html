@@ -30,9 +30,9 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .hero-stat .label { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
 .divider { width: 1px; background: #333; }
 .why { background: #f8f6f0; padding: 2rem 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-.why-item { display: flex; align-items: center; gap: 10px; }
-.why-icon { width: 36px; height: 36px; background: #d4a017; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
-.why-text { font-size: 14px; font-weight: 500; color: #1a1a1a; }
+.why-item { display: flex; align-items: center; background: #fff; border: 1.5px solid #d4a017; border-radius: 4px; padding: 6px 16px; }
+
+.why-text { font-size: 13px; font-weight: 600; color: #1a1a1a; letter-spacing: 0.04em; text-transform: uppercase; }
 .services { padding: 3rem 2rem; background: #fff; }
 .section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4a017; margin-bottom: 0.5rem; font-weight: 500; }
 .section-title { font-size: 26px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
@@ -92,8 +92,8 @@ footer span { font-size: 12px; color: #555; }
 
 .services-teaser { padding: 3rem 2rem; background: #fff; }
 .services-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-.preview-item { display: flex; align-items: center; gap: 10px; background: #fafaf8; border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1rem; font-size: 14px; font-weight: 500; color: #1a1a1a; }
-.preview-icon { font-size: 22px; }
+.preview-item { display: flex; align-items: center; background: #fafaf8; border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1rem 1.25rem; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+
 .btn-view-services { display: inline-block; background: #d4a017; color: #1a1a1a; font-weight: 500; padding: 12px 32px; border-radius: 4px; text-decoration: none; font-size: 14px; letter-spacing: 0.04em; }
 .btn-view-services:hover { background: #e6b520; }
 </style>
@@ -129,30 +129,29 @@ footer span { font-size: 12px; color: #555; }
     </div>
   </div>
   <div class="why">
-    <div class="why-item"><div class="why-icon">&#10003;</div><div class="why-text">Free Estimates</div></div>
-    <div class="why-item"><div class="why-icon">&#9733;</div><div class="why-text">5-Star Rated</div></div>
-    <div class="why-item"><div class="why-icon">&#128081;</div><div class="why-text">Veteran-Owned</div></div>
-    <div class="why-item"><div class="why-icon">&#128205;</div><div class="why-text">Local &amp; Trusted</div></div>
+    <div class="why-item"><div class="why-text">Free Estimates</div></div>
+    <div class="why-item"><div class="why-text">5-Star Rated</div></div>
+    <div class="why-item"><div class="why-text">Veteran-Owned</div></div>
+    <div class="why-item"><div class="why-text">Local &amp; Trusted</div></div>
   </div>
   <section class="services-teaser" id="services">
     <div class="section-label">What We Do</div>
     <div class="section-title">Our Services</div>
     <div class="section-sub">We offer a full range of asphalt and property services for residential and commercial clients throughout the Claremont, NH area.</div>
     <div class="services-preview">
-      <div class="preview-item"><span class="preview-icon">&#127945;</span><span>Paving &amp; Driveways</span></div>
-      <div class="preview-item"><span class="preview-icon">&#127863;</span><span>Sealcoating</span></div>
-      <div class="preview-item"><span class="preview-icon">&#128295;</span><span>Crack Sealing</span></div>
-      <div class="preview-item"><span class="preview-icon">&#128663;</span><span>Line Striping</span></div>
-      <div class="preview-item"><span class="preview-icon">&#10052;</span><span>Snow Plowing</span></div>
-      <div class="preview-item"><span class="preview-icon">&#9881;</span><span>Loader Services</span></div>
-      <div class="preview-item"><span class="preview-icon">&#127968;</span><span>Property Maintenance</span></div>
+      <div class="preview-item"><span>Paving &amp; Driveways</span></div>
+      <div class="preview-item"><span>Sealcoating</span></div>
+      <div class="preview-item"><span>Crack Sealing</span></div>
+      <div class="preview-item"><span>Line Striping</span></div>
+      <div class="preview-item"><span>Snow Plowing</span></div>
+      <div class="preview-item"><span>Loader Services</span></div>
+      <div class="preview-item"><span>Property Maintenance</span></div>
     </div>
     <div style="text-align:center; margin-top:2rem;">
       <a class="btn-view-services" href="services.html">View All Services &rarr;</a>
     </div>
   </section>
   <div class="vet-banner">
-    <div style="font-size:48px;">&#127981;</div>
     <div class="vet-text">
       <h2>Proudly Veteran-Owned &amp; Operated</h2>
       <p>Matthew's Enterprises brings military discipline, integrity, and a commitment to excellence to every job. We treat your property like our own.</p>
