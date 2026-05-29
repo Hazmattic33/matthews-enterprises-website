@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customer Reviews | Matthew's Enterprises | Claremont, NH</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; background: #fff; }
+.site { max-width: 900px; margin: 0 auto; }
+nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: #1a1a1a; border-bottom: 3px solid #d4a017; flex-wrap: wrap; gap: 0.75rem; }
+.nav-logo span:first-child { font-size: 18px; font-weight: 500; color: #d4a017; letter-spacing: 0.05em; display: block; }
+.nav-logo span:last-child { font-size: 11px; color: #aaa; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { color: #ccc; font-size: 13px; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+.nav-links a:hover, .nav-links a.active { color: #d4a017; }
+.nav-cta { background: #d4a017; color: #1a1a1a; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 4px; text-decoration: none; letter-spacing: 0.04em; }
+.nav-cta:hover { background: #e6b520; }
+.page-hero { background: #1a1a1a; padding: 3rem 2rem 2.5rem; border-bottom: 3px solid #d4a017; text-align: center; }
+.page-hero-badge { display: inline-block; background: #d4a017; color: #1a1a1a; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 1rem; }
+.page-hero h1 { font-size: 32px; font-weight: 500; color: #fff; margin-bottom: 0.75rem; }
+.page-hero h1 span { color: #d4a017; }
+.page-hero p { font-size: 15px; color: #aaa; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+.section-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4a017; margin-bottom: 0.5rem; font-weight: 500; }
+.section-title { font-size: 26px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+.section-sub { font-size: 15px; color: #666; margin-bottom: 2rem; }
+.rating-summary { padding: 3rem 2rem 2rem; background: #fff; text-align: center; }
+.rating-big { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.rating-num { font-size: 64px; font-weight: 600; color: #1a1a1a; line-height: 1; }
+.rating-details { text-align: left; }
+.rating-stars { color: #d4a017; font-size: 28px; letter-spacing: 2px; display: block; margin-bottom: 0.25rem; }
+.rating-count { font-size: 14px; color: #666; }
+.google-badge { display: inline-flex; align-items: center; gap: 8px; background: #f8f6f0; border: 1px solid #e0ddd6; border-radius: 6px; padding: 10px 20px; font-size: 14px; color: #1a1a1a; font-weight: 500; text-decoration: none; margin-top: 1rem; }
+.google-badge:hover { border-color: #d4a017; }
+.google-badge svg { width: 20px; height: 20px; }
+.reviews-section { padding: 1rem 2rem 3rem; background: #fff; }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.review-card { background: #fafaf8; border: 0.5px solid #e0ddd6; border-radius: 8px; padding: 1.5rem; transition: border-color 0.2s; }
+.review-card:hover { border-color: #d4a017; }
+.review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+.stars { color: #d4a017; font-size: 14px; }
+.review-date { font-size: 11px; color: #aaa; }
+.review-card p { font-size: 13px; color: #444; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+.reviewer { font-size: 12px; font-weight: 600; color: #1a1a1a; }
+.reviewer span { color: #888; font-weight: 400; font-style: normal; }
+.review-service { display: inline-block; font-size: 11px; background: #fff; border: 0.5px solid #d4a017; color: #d4a017; padding: 2px 8px; border-radius: 3px; margin-top: 0.5rem; letter-spacing: 0.04em; }
+.vet-banner { background: #1a1a1a; padding: 2.5rem 2rem; text-align: center; }
+.vet-banner h2 { font-size: 20px; font-weight: 500; color: #d4a017; margin-bottom: 0.5rem; }
+.vet-banner p { font-size: 14px; color: #aaa; max-width: 480px; margin: 0 auto; line-height: 1.7; }
+.cta-banner { background: #fff; padding: 3rem 2rem; text-align: center; border-top: 3px solid #d4a017; }
+.cta-banner h2 { font-size: 24px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.75rem; }
+.cta-banner p { font-size: 15px; color: #666; max-width: 480px; margin: 0 auto 1.75rem; line-height: 1.7; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: #d4a017; color: #1a1a1a; font-weight: 500; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+.btn-primary:hover { background: #e6b520; }
+.btn-secondary { border: 1.5px solid #d4a017; color: #d4a017; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+.btn-secondary:hover { background: #d4a017; color: #1a1a1a; }
+footer { background: #111; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+footer span { font-size: 12px; color: #555; }
+.footer-logo { font-size: 14px; font-weight: 500; color: #d4a017; }
+@media (max-width: 600px) {
+.nav-links { display: none; }
+.page-hero h1 { font-size: 24px; }
+.rating-num { font-size: 48px; }
+footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="site">
+<nav>
+<a class="nav-logo" href="index.html" style="text-decoration:none;">
+<span>Matthew's Enterprises</span>
+<span>Veteran-Owned &bull; Claremont, NH</span>
+</a>
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="reviews.html" class="active">Reviews</a>
+<a href="contact.html">Contact</a>
+</div>
+<a class="nav-cta" href="contact.html">Get a Quote</a>
+</nav>
+
+<div class="page-hero">
+<div class="page-hero-badge">What Clients Say</div>
+<h1>Customer <span>Reviews</span></h1>
+<p>Real feedback from real customers throughout Claremont, Newport, Springfield, and surrounding NH communities.</p>
+</div>
+
+<section class="rating-summary">
+<div class="section-label">Our Rating</div>
+<div class="section-title">5-Star Rated on Google</div>
+<div class="rating-big">
+<div class="rating-num">5.0</div>
+<div class="rating-details">
+<span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="rating-count">Based on Google Reviews &mdash; Claremont, NH</span>
+</div>
+</div>
+<a class="google-badge" href="https://www.google.com/maps/search/Matthew's+Enterprises+Claremont+NH" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.805 10.023H12v3.955h5.618c-.242 1.31-1.01 2.42-2.15 3.16v2.63h3.48c2.035-1.875 3.21-4.635 3.21-7.895 0-.57-.05-1.12-.153-1.65z" fill="#4285F4"/><path d="M12 22c2.76 0 5.076-.916 6.768-2.482l-3.48-2.63c-.966.648-2.202 1.03-3.288 1.03-2.524 0-4.663-1.705-5.428-3.997H2.977v2.712A10.222 10.222 0 0 0 12 22z" fill="#34A853"/><path d="M6.572 13.921A6.168 6.168 0 0 1 6.25 12c0-.666.113-1.31.322-1.921V7.367H2.977A10.222 10.222 0 0 0 1.778 12c0 1.646.394 3.203 1.199 4.633l3.595-2.712z" fill="#FBBC05"/><path d="M12 5.918c1.424 0 2.7.49 3.706 1.452l2.777-2.777C16.77 2.99 14.455 2 12 2 8.414 2 5.306 4.07 2.977 7.367l3.595 2.712C7.337 7.623 9.476 5.918 12 5.918z" fill="#EA4335"/></svg>
+View on Google Maps
+</a>
+</section>
+
+<section class="reviews-section">
+<div class="section-label">What Clients Say</div>
+<div class="section-title">Recent Reviews</div>
+<div class="reviews-grid">
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Spring 2025</span>
+</div>
+<p>"Matthew's did an amazing job on our driveway. Professional, on time, and great price. Highly recommend!"</p>
+<div class="reviewer">Sarah M. <span>&mdash; Claremont, NH</span></div>
+<span class="review-service">Paving &amp; Driveways</span>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Spring 2025</span>
+</div>
+<p>"Best paving company in the area. The crack sealing work they did on our parking lot looks fantastic."</p>
+<div class="reviewer">Tom R. <span>&mdash; Newport, NH</span></div>
+<span class="review-service">Crack Sealing</span>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Winter 2024&ndash;25</span>
+</div>
+<p>"Used them for snow plowing all last winter. Always reliable and never had to worry about our lot."</p>
+<div class="reviewer">Linda K. <span>&mdash; Springfield, NH</span></div>
+<span class="review-service">Snow Plowing</span>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Fall 2024</span>
+</div>
+<p>"Very professional crew. They sealcoated our driveway and it looks brand new. Will definitely use again next season."</p>
+<div class="reviewer">Mike D. <span>&mdash; Charlestown, NH</span></div>
+<span class="review-service">Sealcoating</span>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Summer 2024</span>
+</div>
+<p>"Called for a quote and they came out the next day. Work was done quickly and the line striping is perfect. Great local company."</p>
+<div class="reviewer">Janet P. <span>&mdash; Claremont, NH</span></div>
+<span class="review-service">Line Striping</span>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+<span class="review-date">Spring 2024</span>
+</div>
+<p>"Matthew is veteran-owned and it shows in how he runs his business &mdash; disciplined, honest, and delivers exactly what he promises."</p>
+<div class="reviewer">Greg S. <span>&mdash; Newport, NH</span></div>
+<span class="review-service">Paving &amp; Driveways</span>
+</div>
+
+</div>
+</section>
+
+<div class="vet-banner">
+<h2>Proudly Veteran-Owned &amp; Operated</h2>
+<p>Matthew's Enterprises brings military discipline, integrity, and a commitment to excellence to every job. We treat your property like our own.</p>
+</div>
+
+<div class="cta-banner">
+<h2>Ready to Get Started?</h2>
+<p>Join hundreds of satisfied customers throughout the Upper Valley. Request your free, no-obligation quote today.</p>
+<div class="cta-btns">
+<a class="btn-primary" href="contact.html">Get a Free Quote</a>
+<a class="btn-secondary" href="tel:6035588380">Call (603) 558-8380</a>
+</div>
+</div>
+
+<footer>
+<span class="footer-logo">Matthew's Enterprises LLC</span>
+<span>24 Bible Hill Rd &bull; Claremont, NH &bull; (603) 558-8380</span>
+<span>&copy; 2025 Matthew's Enterprises LLC</span>
+</footer>
+</div>
+</body>
+</html>
